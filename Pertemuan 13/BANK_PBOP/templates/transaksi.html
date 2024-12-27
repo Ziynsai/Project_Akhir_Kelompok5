@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Transaksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Riwayat Transaksi</h1>
+        <table>
+            <thead>
+                <tr>
+             
+                    <th>ID Nasabah</th>
+                    
+                    <th>Jenis Transaksi</th>
+                    <th>Jumlah</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaksi in transaksi_list %}
+                <tr>
+                   
+                    <td>{{ transaksi['nasabah_id'] }}</td>
+                
+                    <td>{{ transaksi['jenis'] }}</td>
+                    <td>{{ transaksi['jumlah'] }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <form action="/hapus_transaksi" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus semua transaksi?');">
+            <button type="submit" class="delete-button">Hapus Semua Transaksi</button>
+        </form>
+        
+        <div class="button-container">
+            
+                
+                <button class="no-print" onclick="window.print();">Cetak Transaksi</button>
+        </div>
+        
+        <a href="/karyawan" class="back-button">Kembali</a>
+    </div>
+</body>
+</html>

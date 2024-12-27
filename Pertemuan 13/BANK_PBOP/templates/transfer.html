@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Antar Nasabah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Transfer Antar Nasabah</h1>
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+        
+        <form action="/nasabah/transfer" method="POST">
+            <div class="form-group">
+                <label for="nasabah_penerima_id">ID Nasabah Penerima:</label>
+                <input type="text" id="nasabah_penerima_id" name="nasabah_penerima_id" placeholder="Masukkan ID Nasabah Penerima" required>
+            </div>
+            <div class="form-group">
+                <label for="jumlah">Jumlah Transfer:</label>
+                <input type="number" id="jumlah" name="jumlah" placeholder="Masukkan Jumlah" required step="0.01">
+            </div>
+            <button type="submit">Transfer</button>
+        </form>
+        
+        <a href="/nasabah/dashboard" class="back-button">Kembali </a>
+    </div>

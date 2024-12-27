@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Karyawan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Menu </h1>
+        
+        <div class="form-background">
+            <div class="form-container">
+                
+                <form action="/daftarkan_nasabah" method="GET">
+                    <button type="submit">Daftarkan Nasabah</button>
+                </form>
+                <form action="/bekukan_akun" method="GET">
+                    <button type="submit">Bekukan Akun</button>
+                </form>
+                <form action="/aktifkan_akun" method="GET">
+                    <button type="submit">Aktifkan Akun</button>
+                </form>
+                <form action="/update_saldo" method="GET">
+                    <button type="submit">Update Saldo Nasabah</button>
+                </form>
+                <form action="/transaksi" method="GET">
+                    <button type="submit"> Transaksi</button>
+                </form>
+                <form action="/logout" method="POST">
+                    <button type="submit" class="logout-button">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

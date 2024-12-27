@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Saldo Nasabah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Saldo Nasabah</h1>
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+        <form action="/update_saldo" method="POST">
+            <input type="text" name="nasabah_id" placeholder="ID Nasabah" required>
+            <input type="number" name="saldo" placeholder="Saldo Baru" required step="0.01"> <!-- Input untuk saldo baru -->
+            <button type="submit">Update Saldo</button>
+        </form>
+        <a href="/karyawan" class="back-button">Kembali</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Transaction List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Message */
+.message {
+    text-align: center;
+    margin: 10px 0;
+    color: #28a745; /* Green for success messages */
+}
+
+/* Print Button */
+.print-button {
+    background-color: #28a745;
+}
+
+.print-button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+.message {
+    color: green; /* Warna hijau untuk pesan keberhasilan */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.saldo {
+    font-size: 2em; /* Ukuran font lebih besar */
+    font-weight: bold; /* Tebal */
+    color: #007bff; /* Warna biru */
+    margin: 20px 0; /* Jarak atas dan bawah */
+    text-align: center; /* Rata tengah */
+}
+
+.back-button {
+    display: inline-block; /* Agar tombol terlihat seperti tombol */
+    padding: 10px 20px; /* Jarak dalam tombol */
+    margin-top: 20px; /* Jarak atas untuk tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 4px; /* Sudut membulat */
+    background-color: #6c757d; /* Warna latar belakang abu-abu */
+    color: white; /* Warna teks putih */
+    font-size: 16px; /* Ukuran font */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    text-align: center; /* Rata tengah */
+    transition: background-color 0.3s; /* Efek transisi */
+}
+
+.back-button:hover {
+    background-color: #c82333; /* Warna latar belakang saat hover */
+}
+
+/* Gaya untuk tombol Logout */
+.logout-button {
+    display: inline-block; /* Agar tombol terlihat seperti tombol */
+    padding: 10px 20px; /* Jarak dalam tombol */
+    margin-top: 20px; /* Jarak atas untuk tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 4px; /* Sudut membulat */
+    background-color: #6c757d; /* Warna latar belakang merah */
+    color: white; /* Warna teks putih */
+    font-size: 16px; /* Ukuran font */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    text-align: center; /* Rata tengah */
+    transition: background-color 0.3s; /* Efek transisi */
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Warna latar belakang saat hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}

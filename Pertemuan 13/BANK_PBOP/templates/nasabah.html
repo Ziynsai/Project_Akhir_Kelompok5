@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Nasabah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat datang, {{ nasabah['username'] }}!</h1>
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+        <p class="saldo">Saldo Anda: <strong>Rp {{ '{:,.2f}'.format(nasabah['saldo']) }}</strong></p>
+        
+        <div class="form-background">
+            <div class="form-container">
+                
+                <form action="/nasabah/transfer" method="GET">
+                    <button type="submit">Transfer Antar Nasabah</button>
+                </form>
+                <form action="/nasabah/tarik" method="GET">
+                    <button type="submit">Tarik Uang</button>
+                </form>
+                
+            </div>
+        </div>
+        
+        <form action="/logout" method="POST">
+            <button type="submit" class="logout-button">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
